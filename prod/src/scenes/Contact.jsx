@@ -17,7 +17,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="contact py-12 md:py-48">
+    <section id="contact" className="contact pt-10 pb-16">
       {/* HEADINGS */}
       <motion.div
         initial="hidden"
@@ -28,7 +28,7 @@ const Contact = () => {
           hidden: { opacity: 0, x: 50 },
           visible: { opacity: 1, x: 0 },
         }}
-        className="flex justify-end w-full"
+        className="flex justify-end max-md:justify-center w-full"
       >
         <div>
           <p className="font-opensans font-semibold text-4xl">
@@ -36,7 +36,7 @@ const Contact = () => {
             <span className="italic"> TO GET STARTED</span>
           </p>
           <div className="flex md:justify-end my-5">
-            <LineGradient width="w-1/2" />
+            <LineGradient width="w-1/2" className="max-md:hidden" />
           </div>
         </div>
       </motion.div>

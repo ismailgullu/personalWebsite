@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="pt-32 pb-16">
+    <section id="testimonials" className="py-12">
       {/* HEADING */}
       <motion.div
         className="md:w-1/3 text-center md:text-left"
@@ -19,7 +19,7 @@ const Testimonials = () => {
         <p className="font-opensans font-semibold text-4xl mb-5 text-cyan-100">
           TESTIMONIALS
         </p>
-        <LineGradient width="mx-auto w-2/5" />
+        <LineGradient width="w-1/3" className="max-md:hidden" />
         <p className="mt-10 text-lg font-bold">
           Here's What People are Saying About My Work!
         </p>

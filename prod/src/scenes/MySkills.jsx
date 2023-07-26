@@ -7,9 +7,9 @@ const MySkills = () => {
   return (
     <section id="skills">
       {/* HEADER AND IMAGE SECTION */}
-      <div className="md:flex md:justify-between md:gap-16 pt-32">
+      <div className="md:flex md:justify-between md:gap-16 pt-16">
         <motion.div
-          className="md:w-1/3"
+          className="w-full"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -19,10 +19,10 @@ const MySkills = () => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <p className="font-opensans font-semibold text-cyan-100 text-4xl mb-5">
+          <p className="font-opensans max-md:text-center font-semibold text-cyan-100 text-4xl mb-5">
             MY SKILLS
           </p>
-          <LineGradient width="w-1/3" />
+          <LineGradient width="w-1/3" className="max-md:hidden" />
           <p className="mt-10 mb-7">
             I've been working as a front-end developer for several years now.
             I've started my career at Garanti BBVA. I've established strong
@@ -34,27 +34,10 @@ const MySkills = () => {
             kitchen. I care for the e-commerce website of the company.
           </p>
         </motion.div>
-
-        <div className="mt-16 md:mt-0">
-          {isAboveLarge ? (
-            <div
-              className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
-              before:w-full before:h-full before:border-2 before:border-blue before:z-[-1]"
-            >
-              <img
-                alt="skills"
-                className="z-10"
-                src="assets/skills-image.png"
-              />
-            </div>
-          ) : (
-            <img alt="skills" className="z-10" src="assets/skills-image.png" />
-          )}
-        </div>
       </div>
 
       {/* SKILLS */}
-      <div className="md:flex md:justify-between mt-16 gap-32">
+      <div className="md:flex md:justify-between my-16 gap-32">
         {/* EXPERIENCE */}
         <motion.div
           className="md:w-1/3 mt-10"
