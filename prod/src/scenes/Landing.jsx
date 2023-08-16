@@ -16,7 +16,7 @@ const Landing = ({ setSelectedPage }) => {
         >
           <img
             alt="profile"
-            className="filter blur-sm hover:blur-none transition duration-500 z-10 w-full max-w-[200px] md:max-w-[300px] rounded-t-full"
+            className="filter blur-sm max-md:blur-none hover:blur-none transition duration-500 z-10 w-full max-w-[200px] md:max-w-[300px] rounded-t-full"
             src="assets/profile-image.jpeg"
           />
         </div>

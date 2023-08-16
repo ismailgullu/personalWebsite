@@ -5,16 +5,8 @@ import { motion } from "framer-motion";
 const Contact = () => {
   const {
     register,
-    handleSubmit,
     formState: { errors },
   } = useForm();
-
-  const onSubmit = (e) => {
-    const isValid = handleSubmit();
-    if (!isValid) {
-      e.preventDefault();
-    }
-  };
 
   return (
     <section id="contact" className="contact pt-10 pb-16">
@@ -52,9 +44,27 @@ const Contact = () => {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="basis-1/2 flex justify-center"
+          className="basis-1/2 flex flex-col items-center justify-center text-2xl font-mono max-md:flex-row max-md:gap-3 "
         >
-          <img src="../assets/contact-image.jpeg" alt="contact" />
+          <p className="bg-white shadow-xl text-black rounded-3xl p-3 max-w-min hover:text-white hover:bg-transparent duration-300 transition-all">
+            Don't
+          </p>
+          <br />
+          <p className="bg-white shadow-xl text-black rounded-3xl p-3 max-w-min hover:text-white hover:bg-transparent duration-300 transition-all">
+            hesitate
+          </p>
+          <br />
+          <p className="bg-white shadow-xl text-black rounded-3xl p-3 max-w-min hover:text-white hover:bg-transparent duration-300 transition-all">
+            to
+          </p>
+          <br />
+          <p className="bg-white shadow-xl text-black rounded-3xl p-3 max-w-min hover:text-white hover:bg-transparent duration-300 transition-all">
+            contact
+          </p>
+          <br />
+          <p className="bg-white shadow-xl text-black rounded-3xl p-3 max-w-min hover:text-white hover:bg-transparent duration-300 transition-all">
+            me
+          </p>
         </motion.div>
 
         <motion.div
@@ -70,7 +80,6 @@ const Contact = () => {
         >
           <form
             target="_blank"
-            onSubmit={onSubmit}
             action="https://formsubmit.co/igullu2001@gmail.com"
             method="POST"
           >
@@ -81,12 +90,14 @@ const Contact = () => {
               {...register("name", {
                 required: true,
                 maxLength: 100,
+                minLength: 3,
               })}
             />
             {errors.name && (
               <p className="text-red mt-1">
                 {errors.name.type === "required" && "This field is required."}
                 {errors.name.type === "maxLength" && "Max length is 100 char."}
+                {errors.name.type === "minLength" && "Min length is 3 char."}
               </p>
             )}
 
