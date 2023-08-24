@@ -126,22 +126,29 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             {/* MENU ITEMS */}
             <div className="flex flex-col gap-10 ml-[33%] text-2xl text-white">
               <Link
-                page="Home"
+                page={i18n.t("home")}
+                val="home"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
               <Link
-                page="Skills"
+                page={i18n.t("skills")}
+                val="skills"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
               <Link
-                page="Testimonials"
+                page={i18n.t("testimonials")}
+                val="testimonials"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
               <Link
-                page="Contact"
+                page={
+                  i18n.t("contact").charAt(0).toUpperCase() +
+                  i18n.t("contact").slice(1)
+                }
+                val="contact"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
