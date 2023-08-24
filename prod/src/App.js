@@ -2,12 +2,12 @@ import Navbar from "./scenes/Navbar";
 import Landing from "./scenes/Landing";
 import DotGroup from "./scenes/DotGroup";
 import MySkills from "./scenes/MySkills";
+import Testimonials from "./scenes/Testimonials";
+import Footer from "./scenes/Footer";
 import LineGradient from "./components/LineGradient";
 import Contact from "./scenes/Contact";
-import Footer from "./scenes/Footer";
 import useMediaQuery from "./hooks/useMediaQuery";
 import { useEffect, useState } from "react";
-import Testimonials from "./scenes/Testimonials";
 import { motion } from "framer-motion";
 
 function App() {
