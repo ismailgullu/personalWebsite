@@ -11,7 +11,6 @@ const Contact = () => {
   const { i18n } = useTranslation();
   return (
     <section id="contact" className="contact pt-10 pb-16">
-      {/* HEADINGS */}
       <motion.div
         initial="hidden"
         whileInView="visible"
