@@ -85,12 +85,29 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
             </span>
           </div>
         ) : (
-          <button
-            className="rounded-full bg-black p-2"
-            onClick={() => setIsMenuToggled(!isMenuToggled)}
-          >
-            <img alt="menu-icon" src="../assets/menu-icon.svg" />
-          </button>
+          <div className="flex gap-3">
+            <span className="flex items-center gap-2">
+              <img
+                className="aspect-square h-9 cursor-pointer"
+                alt="TR"
+                src="../assets/tr.png"
+                onClick={() => clickHandle("tr")}
+              />
+              |{" "}
+              <img
+                className="aspect-square ml-0.5 h-7 cursor-pointer"
+                alt="EN"
+                src="../assets/uk.png"
+                onClick={() => clickHandle("en")}
+              />
+            </span>
+            <button
+              className="rounded-full border-2 border-white p-2"
+              onClick={() => setIsMenuToggled(!isMenuToggled)}
+            >
+              <img alt="menu-icon" src="../assets/menu-icon.svg" />
+            </button>
+          </div>
         )}
 
         {/* MOBILE MENU POPUP */}
@@ -98,7 +115,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           <div className="fixed right-0 bottom-0 h-full bg-black w-[300px]">
             {/* CLOSE ICON */}
             <div className="flex justify-end p-12">
-              <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+              <button
+                onClick={() => setIsMenuToggled(!isMenuToggled)}
+                className="-translate-y-3"
+              >
                 <img alt="close-icon" src="../assets/close-icon.svg" />
               </button>
             </div>

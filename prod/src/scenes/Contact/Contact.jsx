@@ -48,7 +48,7 @@ const Contact = () => {
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
           }}
-          className="basis-1/2 flex flex-col items-center justify-center text-2xl font-mono max-md:flex-row max-md:gap-3"
+          className="basis-1/2 flex flex-col items-center justify-center text-2xl font-mono max-md:flex-row max-md:flex-wrap max-md:gap-3"
         >
           <p className="bg-white shadow-xl text-black rounded-3xl p-3 max-w-min hover:text-white hover:bg-transparent duration-300 transition-all">
             {i18n.t("dont")}
